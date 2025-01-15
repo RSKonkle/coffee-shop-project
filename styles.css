@@ -1,1 +1,146 @@
 /* STYLE SHEET */
+
+/* 
+COLOR PALETTE:
+Off-White - #EAE7DE
+Coyote Brown - #7A6655
+Bistre Brown - #3D2C24
+Golden Lion - #C4955F
+Alloy Orange - #C96916
+*/
+
+body {
+    margin: 0;
+    background-color: #EAE7DE;
+    font-family: Constantia, "Lucida Bright", Lucidabright, "Lucida Serif", Lucida, "DejaVu Serif", "Bitstream Vera Serif", "Liberation Serif", Georgia, serif;
+}
+
+.header-hero-wrap {
+    background: url("./images/coffee-bar.jpg") no-repeat 50% 80%;
+    background-size: cover;
+    color: #EAE7DE;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Subtle shadow */
+    position: relative;
+}
+
+.header-hero-wrap::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7); /* Black overlay with 50% transparency */
+    z-index: 1; /* Behind the text */
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 40vh;
+    height: 6vh;
+    position: relative;
+    z-index: 2;
+}
+
+.header a {
+    text-decoration: none;
+    font-size: 18px;
+    color: #EAE7DE;
+    z-index: 2;
+}
+
+.nav {
+    display: flex;
+    gap: 24px;
+}
+
+.hero-section {
+    height: 50vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    z-index: 2;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.hero-content h1 {
+    font-size: 48px;
+    letter-spacing: 8px;
+    color: #EAE7DE;
+}
+
+.hero-content p {
+    font-size: 24px;
+    width: 1000px;
+    color: #EAE7DE;
+}
+
+.highlight {
+    color: #7A6655;
+}
+
+.scroll-showcase {
+    box-shadow: inset 0 5px 12px -5px rgba(0, 0, 0, 0.5), /* Top shadow */
+                inset 0 -5px 12px -5px rgba(0, 0, 0, 0.5); /* Bottom shadow */
+    display: flex;
+    position: relative;
+    overflow: hidden;
+}
+
+.sc-content {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    white-space: nowrap;
+    animation: animate var(--t) linear infinite;
+    animation-delay: calc(var(--t) * -1);
+    padding: 24px 0;
+}
+
+.sc-content:nth-child(2) {
+    animation: animate2 var(--t) linear infinite;
+    animation-delay: calc(var(--t) / -2);
+}
+
+@keyframes animate {
+    0% {
+        transform: translateX(100%);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+@keyframes animate2 {
+    0% {
+        transform: translateX(0)
+    }
+    100% {
+        transform: translateX(-200%);
+    }
+}
+
+.sc-tile {
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+    height: 300px;
+    width: 300px;
+    margin: 20px;
+    overflow: hidden;
+    display: inline-flex;
+    border-radius: 4px;
+}
+
+.sc-tile img {
+    object-fit: cover;
+    max-height: 100%;
+}
