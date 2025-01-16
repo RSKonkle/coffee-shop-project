@@ -166,6 +166,8 @@ body {
     justify-content: right;
     align-items: center;
     background-color: #EAE7DE;
+    box-shadow: inset 0 5px 12px -5px rgba(0, 0, 0, 0.5), /* Top shadow */
+                inset 0 -5px 12px -5px rgba(0, 0, 0, 0.5); /* Bottom shadow */
 }
 
 .info-box img {
